@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
+    # adding our own custom dependency
+    merise_dot.url = "github:merisedot-dev/merise_dot";
   };
 
   outputs =
@@ -11,6 +13,7 @@
       self,
       nixpkgs,
       flake-utils,
+      merise_dot,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -20,7 +23,7 @@
       in
       {
         # default build
-        packages.default = pkgs.callPackage ./default.nix { };
+        packages.default = pkgs.callPackage ./default.nix { inherit merise_dot; };
 
         # devShells from fellow lazy devs
         devShells.default = pkgs.mkShell {
@@ -32,6 +35,8 @@
             [
               venvShellHook
               bumpver
+              behave # testing utility
+              mkdocs # documentation building tool
             ];
           postVenvCreation = "pip install -e .";
           venvDir = ".venv";

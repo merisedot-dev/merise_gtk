@@ -1,10 +1,10 @@
 [project]
 name = "merise_gtk"
 description = "GTK interface for merise_dot"
-license="GPL-3.0-only"
+license = "GPL-3.0-only"
 dynamic = [ "version" ]
 requires-python = ">=3.8"
-dependencies = [] # TODO
+dependencies = [] # TODO add merise_dot as dependency
 
 [[project.authors]]
 name = "kheldae"

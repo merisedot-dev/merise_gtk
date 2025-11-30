@@ -5,6 +5,7 @@
   python3Packages,
   fetchPypi,
   hatch,
+  merise_dot, # our own custom dependency
   ...
 }:
 

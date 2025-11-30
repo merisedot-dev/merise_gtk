@@ -4,7 +4,10 @@ description = "GTK interface for merise_dot"
 license = "GPL-3.0-only"
 dynamic = [ "version" ]
 requires-python = ">=3.8"
-dependencies = [] # TODO add merise_dot as dependency
+dependencies = [
+    # inner library
+    "merise_dot @ git+https://github.com/merisedot-dev/merise_dot"
+]
 
 [[project.authors]]
 name = "kheldae"
@@ -22,6 +25,9 @@ path = "merise_gtk/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = [ "merise_gtk" ]
+
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [tool.bumpver]
 current_version = "0.0.0"

@@ -33,9 +33,10 @@ python3Packages.buildPythonApplication {
   src = ./.;
   format = "pyproject";
 
-  nativeBuildInputs = [
+  nativeBuildInputs = with python3Packages; [
     hatch
     hatch-build-scripts
     merise_dot # inner library
+    pygobject3
   ];
 }

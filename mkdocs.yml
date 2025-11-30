@@ -1,0 +1,7 @@
+site_name: merise_gtk
+theme:
+  name: mkdocs
+  color_mode: dark
+
+nav:
+  - Home: index.md

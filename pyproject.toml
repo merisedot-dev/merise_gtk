@@ -5,8 +5,7 @@ license = "GPL-3.0-only"
 dynamic = [ "version" ]
 requires-python = ">=3.8"
 dependencies = [
-    # inner library
-    "merise_dot @ git+https://github.com/merisedot-dev/merise_dot"
+    "merise_dot @ git+https://github.com/merisedot-dev/merise_dot" # inner library
 ]
 
 [[project.authors]]

@@ -22,7 +22,5 @@ cd merise_gtk
 nix profile add .
 ```
 
-## Usage
-
 [MeriseDot]: https://github.com/merisedot-dev/merise_dot
 [Nix]: https://nixos.org

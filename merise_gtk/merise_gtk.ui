@@ -17,7 +17,9 @@
             <property name="margin-top">5</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkButton" id="btn1"/>
+              <object class="GtkButton" id="btn1">
+                <property name="label">testopommes</property>
+              </object>
             </child>
           </object>
         </child>

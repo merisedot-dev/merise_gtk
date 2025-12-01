@@ -41,7 +41,7 @@
               bumpver
               behave # testing utility
               mkdocs # documentation building tool
-              poetry # deps toolchain
+              libadwaita
             ];
           postVenvCreation = "pip install -e .";
           venvDir = ".venv";

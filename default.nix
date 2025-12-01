@@ -43,8 +43,8 @@ python3Packages.buildPythonApplication {
     with pkgs;
     with python3Packages;
     [
-      pygobject3 # graphics stubs
+      pygobject3 # GLib introspection bridge
       gtk4 # graphics toolkit
-      adw-gtk3 # FIXME
+      libadwaita
     ];
 }

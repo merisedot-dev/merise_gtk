@@ -5,7 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
     # adding our own custom dependency
-    meriseDot.url = "github:merisedot-dev/merise_dot";
+    meriseDot = {
+      url = "github:merisedot-dev/merise_dot";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

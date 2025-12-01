@@ -26,6 +26,9 @@ path = "merise_gtk/__init__.py"
 [tool.hatch.build.targets.wheel]
 packages = [ "merise_gtk" ]
 
+[project.scripts]
+merise_gtk = "merise_gtk:main"
+
 [tool.hatch.metadata]
 allow-direct-references = true
 

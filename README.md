@@ -4,7 +4,7 @@ A GUI for [MeriseDot], meant both as a PoC and a default usable interface to edi
 
 ## Installation
 
-As of now, not that many methods are implemented for installation, but they can be added if needed. Please refer to the contribution guidelines if you wish to add your own.
+As of now, not that many methods are implemented for installation, but they can be added if needed. Please refer to the contribution guidelines if you wish to add your own and please keep in mind `pip` does *not* install GTK4 (which is required).
 
 ### Nix
 

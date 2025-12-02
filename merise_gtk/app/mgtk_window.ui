@@ -47,6 +47,13 @@
             </child>
           </object>
         </child>
+        <child>
+          <object class="GtkOverlay">
+            <property name="child">
+              <object class="GtkStack"/>
+            </property>
+          </object>
+        </child>
       </object>
     </child>
   </template>
@@ -84,12 +91,4 @@
     </section>
   </menu>
   <menu id="proj-menu"/>
-  <object class="GtkFileFilter" id="file-filter">
-    <mime-types>
-      <mime-type>application/x-merisedot-project</mime-type>
-    </mime-types>
-    <patterns>
-      <pattern>*.mdot</pattern>
-    </patterns>
-  </object>
 </interface>

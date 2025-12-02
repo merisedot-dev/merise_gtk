@@ -4,7 +4,7 @@
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
   <gresources filename="app/app.gresource.xml" sha256="a7e9c971e4f4c68b151dae6add2996b0b0927625f5c6bccffb45eea86acf9ab1"/>
   <css filename="app/mtgk.css" is_global="0"/>
-  <ui template-class="mgtk-window" filename="app/mgtk_window.ui" sha256="ec7f4edd7c84462c1dc684409e0041294892314730ac0b61580d12abd608a47e">
+  <ui template-class="mgtk-window" filename="app/mgtk_window.ui" sha256="5fdbe98ca00a0f0c100206110cd6c4e77854d7f644c2cc8c2f02d0645184e290">
     <css-provider>app/mtgk.css</css-provider>
   </ui>
 </cambalache-project>

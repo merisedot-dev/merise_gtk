@@ -84,7 +84,7 @@
     </section>
   </menu>
   <menu id="proj-menu"/>
-  <object class="GtkFileFilter">
+  <object class="GtkFileFilter" id="file-filter">
     <mime-types>
       <mime-type>application/x-merisedot-project</mime-type>
     </mime-types>

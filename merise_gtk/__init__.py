@@ -19,7 +19,7 @@ class MyApp(Adw.Application):
         builder = Gtk.Builder()
         builder.add_from_file("merise_gtk/merise_gtk.ui")
         # display main window
-        self.win = builder.get_object("root_window")
+        self.win = builder.get_object("root-window")
         self.win.set_application(self)
         self.win.present()
 

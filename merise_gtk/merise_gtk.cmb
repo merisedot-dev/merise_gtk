@@ -2,5 +2,6 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <!-- Created with Cambalache 0.96.3 -->
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
-  <ui filename="merise_gtk.ui" sha256="c46c931a54c263bdc69e2f38f05ee174375538ff157b382f970827f91b4b9dd4"/>
+  <gresources filename="merise_gtk.gresource.xml" sha256="be63584368f65f9856f726d6e3c3a08abfbb7df2cd666acdf66d563819aafbbe"/>
+  <ui filename="merise_gtk.ui" sha256="c084a12156b7900d5e17f435686009ce2970b17c862cef019bcb4dc4d39340bb"/>
 </cambalache-project>

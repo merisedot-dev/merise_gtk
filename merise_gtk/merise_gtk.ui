@@ -2,28 +2,84 @@
 <!-- Created with Cambalache 0.96.3 -->
 <interface>
   <!-- interface-name merise_gtk.ui -->
+  <requires lib="gio" version="2.0"/>
   <requires lib="gtk" version="4.18"/>
-  <object class="GtkApplicationWindow" id="root_window">
-    <property name="default-height">200</property>
-    <property name="default-width">400</property>
+  <requires lib="libadwaita" version="1.4"/>
+  <object class="GtkApplicationWindow" id="root-window">
+    <property name="decorated">False</property>
+    <property name="default-height">600</property>
+    <property name="default-width">1400</property>
     <property name="title">MeriseGTK</property>
     <child>
       <object class="GtkBox">
+        <property name="orientation">vertical</property>
         <child>
-          <object class="GtkBox">
-            <property name="margin-bottom">5</property>
-            <property name="margin-end">5</property>
-            <property name="margin-start">5</property>
-            <property name="margin-top">5</property>
-            <property name="orientation">vertical</property>
+          <object class="AdwHeaderBar" id="mgtk-header">
             <child>
-              <object class="GtkButton" id="btn1">
-                <property name="label">testopommes</property>
+              <object class="AdwSplitButton" id="mgtk.open-btn">
+                <property name="action-name">mgtk.open-btn.choose</property>
+                <property name="label">Open</property>
+                <property name="menu-model">proj-menu</property>
               </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="undo-btn">
+                <property name="action-name">mgtk.undo-btn.click</property>
+                <property name="icon-name">edit-undo-symbolic</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="mgtk.redo-btn">
+                <property name="action-name">mgtk.redo-btn.click</property>
+                <property name="icon-name">edit-redo-symbolic</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="mgtk.main-menu">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">mgtk-menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkOverlay">
+            <child>
+              <object class="GtkStack" id="mgtk-stack"/>
             </child>
           </object>
         </child>
       </object>
     </child>
   </object>
+  <menu id="proj-menu"/>
+  <menu id="mgtk-menu">
+    <item>
+      <attribute name="action">mgtk_menu.mk_proj</attribute>
+      <attribute name="label">New Project</attribute>
+    </item>
+    <section>
+      <submenu>
+        <attribute name="label">Add file</attribute>
+        <item>
+          <attribute name="action">mgtk_menu.add_db</attribute>
+          <attribute name="label">Add DB</attribute>
+        </item>
+        <item>
+          <attribute name="action">mgtk_menu.add_script</attribute>
+          <attribute name="label">Add script</attribute>
+        </item>
+      </submenu>
+    </section>
+    <section>
+      <item>
+        <attribute name="action">mgtk_menu.save</attribute>
+        <attribute name="label">Save</attribute>
+      </item>
+      <item>
+        <attribute name="action">mgtk_menu.close</attribute>
+        <attribute name="label">Close project</attribute>
+      </item>
+    </section>
+  </menu>
 </interface>

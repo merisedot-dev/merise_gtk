@@ -1,7 +1,5 @@
 {
   pkgs,
-  stdenv,
-  python3,
   python3Packages,
   fetchPypi,
   hatch,

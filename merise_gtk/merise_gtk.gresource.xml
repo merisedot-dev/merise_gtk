@@ -3,5 +3,6 @@
 <gresources>
   <gresource prefix="com/github/merisedot-dev/merise_gtk">
     <file>merise_gtk.ui</file>
+    <file>merise_gtk.css</file>
   </gresource>
 </gresources>

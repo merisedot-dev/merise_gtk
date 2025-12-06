@@ -4,18 +4,19 @@ import gi
 from gi.repository import Adw, Gio, Gtk
 
 # inner imports
+from .model import MGTKProject
 
 
-class MGTKApp(Adw.ApplicationWindow):
+class MGTKApp(Adw.Application):
     # TODO fetch relevant components
     # TODO fetch relevant signals
     # TODO fetch relevant properties
 
     def __init__(self, **kwargs) -> None:
-        self._proj = None # TODO define project type
+        self._proj: MGTKProject = None
 
         # GTK constructors like to do stuff
-        super().__init__(kwargs)
+        super().__init__(**kwargs)
 
         # link correct behavior
         self.connect("activate", self.on_activate)

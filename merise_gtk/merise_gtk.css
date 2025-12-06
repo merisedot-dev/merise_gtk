@@ -1,1 +1,9 @@
 /* main stylesheet of the project */
+
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+GtkApplicationWindow {
+    border-radius: 1ex 1ex 0 0;
+}

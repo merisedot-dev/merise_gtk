@@ -18,6 +18,11 @@ class MGTKApp(Adw.Application):
         # GTK constructors like to do stuff
         super().__init__(**kwargs)
 
+        # adding CSS stylesheet
+        css_file = Gio.File.new_for_path("merise_gtk/merise_gtk.css")
+        self._css_provider = Gtk.CssProvider()
+        self._css_provider.load_from_file(css_file)
+
         # link correct behavior
         self.connect("activate", self.on_activate)
 

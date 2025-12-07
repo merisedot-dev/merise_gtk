@@ -2,8 +2,9 @@
 
 :root {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Custom colorscheme definition */
 }
 
 GtkApplicationWindow {
-    border-radius: 1ex 1ex 0 0;
+    padding: 1px;
 }

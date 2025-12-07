@@ -40,6 +40,12 @@
                 <property name="menu-model">mgtk-menu</property>
               </object>
             </child>
+            <child type="end">
+              <object class="GtkButton" id="mgtk.newproj-btn">
+                <property name="action-name">mgtk_menu.mk_proj</property>
+                <property name="icon-name">list-add-symbolic</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

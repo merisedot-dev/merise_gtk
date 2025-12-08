@@ -15,5 +15,5 @@ from .application import MGTKApp
 # app launcher
 def main() -> None:
     app: MGTKApp = MGTKApp(
-        application_id="com/github/merisedot-dev/merise_gtk")
+        application_id="com.github.merisedot-dev.merise_gtk")
     app.run()

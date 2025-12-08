@@ -22,10 +22,14 @@ class MGTKApp(Adw.Application):
         self._css_provider = Gtk.CssProvider()
         self._css_provider.load_from_file(css_file)
         # link relevant behaviors
-        self.connect("activate", self._on_activate)
+        for act in ["mk_proj"]:
+            action = Gio.SimpleAction.new(act, None)
+            action.connect("activate", getattr(self, f"on_{act}_activate"))
+            self.add_action(action) # FIXME this does not set anything
+        self.connect("activate", self.on_activate)
 
     # launch method
-    def _on_activate(self, app) -> None:
+    def on_activate(self, app) -> None:
         builder = Gtk.Builder()
         builder.add_from_file("merise_gtk/application.ui")
         # display main window
@@ -34,5 +38,5 @@ class MGTKApp(Adw.Application):
         self.win.present()
 
     # project creator method
-    def _mk_proj(self) -> None:
+    def on_mk_proj_activate(self) -> None:
         pass # TODO find action to link

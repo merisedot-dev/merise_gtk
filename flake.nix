@@ -41,6 +41,7 @@
               bumpver
               behave # testing utility
               mkdocs # documentation building tool
+              # graphics tools
               libadwaita
             ];
           postVenvCreation = "pip install -e .";

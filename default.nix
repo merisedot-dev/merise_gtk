@@ -44,5 +44,6 @@ python3Packages.buildPythonApplication {
       pygobject3 # GLib introspection bridge
       gtk4 # graphics toolkit
       libadwaita
+      pycairo
     ];
 }

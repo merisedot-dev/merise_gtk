@@ -1,42 +1,30 @@
 import gi
+from .window import MGTKWindow
 
 # GTK checks
-from gi.repository import Adw, Gio, Gtk
+from gi.repository import Adw, Gtk
 
-# inner imports
-from .model import MGTKProject
+# Extra constants
+APP_ID: str = "com.github.com.merisedot-dev.merise_gtk"
 
 
 class MGTKApp(Adw.Application):
-    # TODO fetch relevant components
-    # TODO fetch relevant signals
-    # TODO fetch relevant properties
-    # TODO set keybinds for ease of use
+    """Root application class.
+    This will act as a launcher, which will fetch the other windows and decide
+    how the app will launch itself. Root-level logic should be handled here, as long
+    as it doesn't rely on an interface.
+    """
 
-    def __init__(self, **kwargs) -> None:
-        self._proj: MGTKProject = None
-        # GTK constructors like to do stuff
-        super().__init__(**kwargs)
-        # adding CSS stylesheet
-        css_file = Gio.File.new_for_path("merise_gtk/merise_gtk.css")
-        self._css_provider = Gtk.CssProvider()
-        self._css_provider.load_from_file(css_file)
-        # link relevant behaviors
-        for act in ["mk_proj"]:
-            action = Gio.SimpleAction.new(act, None)
-            action.connect("activate", getattr(self, f"on_{act}_activate"))
-            self.add_action(action) # FIXME this does not set anything
-        self.connect("activate", self.on_activate)
+    def __init__(self) -> None:
+        super().__init__(application_id=APP_ID)
 
-    # launch method
-    def on_activate(self, app) -> None:
-        builder = Gtk.Builder()
-        builder.add_from_file("merise_gtk/application.ui")
-        # display main window
-        self.win = builder.get_object("root-window")
-        self.win.set_application(self)
-        self.win.present()
+    # define new application window for MeriseGtk
+    def mk_window(self) -> MGTKWindow:
+        win: MGTKWindow = MGTKWindow(application=self)
+        # TODO add window specifics
+        self.add_window(win)
+        return win
 
-    # project creator method
-    def on_mk_proj_activate(self) -> None:
-        pass # TODO find action to link
+    def do_startup(self) -> None:
+        win = self.mk_window()
+        win.present()

@@ -5,7 +5,7 @@
   <requires lib="gio" version="2.0"/>
   <requires lib="gtk" version="4.18"/>
   <requires lib="libadwaita" version="1.4"/>
-  <object class="GtkApplicationWindow" id="root-window">
+  <template class="root-window" parent="GtkApplicationWindow">
     <property name="decorated">False</property>
     <property name="default-height">600</property>
     <property name="default-width">1400</property>
@@ -42,7 +42,7 @@
             </child>
             <child type="end">
               <object class="GtkButton" id="mgtk.newproj-btn">
-                <property name="action-name">mgtk_menu.mk_proj</property>
+                <property name="action-name">mk_proj</property>
                 <property name="icon-name">list-add-symbolic</property>
               </object>
             </child>
@@ -120,11 +120,11 @@
         </child>
       </object>
     </child>
-  </object>
+  </template>
   <menu id="proj-menu"/>
   <menu id="mgtk-menu">
     <item>
-      <attribute name="action">mgtk_menu.mk_proj</attribute>
+      <attribute name="action">mk_proj</attribute>
       <attribute name="label">New Project</attribute>
     </item>
     <section>

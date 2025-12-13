@@ -1,7 +1,7 @@
 import gi
 
 # GTK checks
-from gi.repository import Adw, Gio, Gtk
+from gi.repository import Adw, Gtk
 
 # inner imports
 from .model import MGTKProject

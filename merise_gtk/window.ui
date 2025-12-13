@@ -14,34 +14,34 @@
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="AdwHeaderBar" id="mgtk-header">
+          <object class="AdwHeaderBar" id="mgtk_header">
             <child>
-              <object class="AdwSplitButton" id="mgtk.open-btn">
+              <object class="AdwSplitButton" id="mgtk.open_btn">
                 <property name="action-name">mgtk.open-btn.choose</property>
                 <property name="label">Open</property>
                 <property name="menu-model">proj-menu</property>
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="undo-btn">
+              <object class="GtkButton" id="undo_btn">
                 <property name="action-name">mgtk.undo-btn.click</property>
                 <property name="icon-name">edit-undo-symbolic</property>
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="mgtk.redo-btn">
+              <object class="GtkButton" id="mgtk.redo_btn">
                 <property name="action-name">mgtk.redo-btn.click</property>
                 <property name="icon-name">edit-redo-symbolic</property>
               </object>
             </child>
             <child type="end">
-              <object class="GtkMenuButton" id="mgtk.main-menu">
+              <object class="GtkMenuButton" id="mgtk.main_menu">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">mgtk-menu</property>
               </object>
             </child>
             <child type="end">
-              <object class="GtkButton" id="mgtk.newproj-btn">
+              <object class="GtkButton" id="mgtk.newproj_btn">
                 <property name="action-name">mk_proj</property>
                 <property name="icon-name">list-add-symbolic</property>
               </object>

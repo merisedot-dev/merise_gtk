@@ -16,7 +16,7 @@
         <child>
           <object class="AdwHeaderBar" id="mgtk_header">
             <child>
-              <object class="AdwSplitButton" id="mgtk.open_btn">
+              <object class="AdwSplitButton" id="open_btn">
                 <property name="action-name">mgtk.open-btn.choose</property>
                 <property name="label">Open</property>
                 <property name="menu-model">proj-menu</property>
@@ -29,19 +29,19 @@
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="mgtk.redo_btn">
+              <object class="GtkButton" id="redo_btn">
                 <property name="action-name">mgtk.redo-btn.click</property>
                 <property name="icon-name">edit-redo-symbolic</property>
               </object>
             </child>
             <child type="end">
-              <object class="GtkMenuButton" id="mgtk.main_menu">
+              <object class="GtkMenuButton" id="main_menu">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">mgtk-menu</property>
               </object>
             </child>
             <child type="end">
-              <object class="GtkButton" id="mgtk.newproj_btn">
+              <object class="GtkButton" id="newproj_btn">
                 <property name="action-name">mk_proj</property>
                 <property name="icon-name">list-add-symbolic</property>
               </object>
@@ -51,7 +51,7 @@
         <child>
           <object class="GtkOverlay">
             <child type="overlay">
-              <object class="GtkStack" id="mgtk-stack">
+              <object class="GtkStack" id="mgtk_stack">
                 <property name="transition-type">crossfade</property>
                 <child>
                   <object class="GtkStackPage">
@@ -62,7 +62,7 @@
                             <property name="column-homogeneous">True</property>
                             <property name="row-homogeneous">True</property>
                             <child>
-                              <object class="GtkPicture" id="mgtk.logo">
+                              <object class="GtkPicture" id="mgtk_logo">
                                 <property name="vexpand">True</property>
                                 <layout>
                                   <property name="column">1</property>
@@ -89,7 +89,7 @@
                               </object>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="mgtk-version-lbl">
+                              <object class="GtkLabel" id="mgtk_version_lbl">
                                 <property name="halign">center</property>
                                 <property name="name">version</property>
                                 <property name="valign">start</property>

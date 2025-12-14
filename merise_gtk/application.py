@@ -2,6 +2,8 @@ import gi
 from .window import MGTKWindow
 
 # GTK checks
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 from gi.repository import Adw, Gtk
 
 # Extra constants
@@ -25,6 +27,7 @@ class MGTKApp(Adw.Application):
         self.add_window(win)
         return win
 
-    def do_startup(self) -> None:
+    # startup method for the app. Do not touch do_startup
+    def do_activate(self) -> None:
         win = self.mk_window()
         win.present()

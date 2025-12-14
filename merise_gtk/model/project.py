@@ -1,9 +1,14 @@
-class MGTKProject:
-    """Project definition class.
-    Here, a project is defined as a collection of files indexed by a root project
-    file, in the form `<name>.mgtk` (the mgtk "format" is mostly a marker).
-    """
+from gi.repository import GObject
 
-    def __init__(self, name: str) -> None:
+
+class MGTKProject(GObject.Object):
+    __gtype_name__ = "MGTKProject"
+
+    # TODO define watched signals
+    # TODO define properties
+    # TODO add extra logic
+
+    def __init__(self, name: str, **kwargs) -> None:
         self._name = name
-        # TODO define inner workings
+        # gtk constructor, to set the right defaults
+        super().__init__(**kwargs)

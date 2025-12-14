@@ -23,7 +23,7 @@ class MGTKApp(Adw.Application):
     # define new application window for MeriseGtk
     def mk_window(self) -> MGTKWindow:
         win: MGTKWindow = MGTKWindow(application=self)
-        # TODO add window specifics
+        # TODO add window specifics if needed
         self.add_window(win)
         return win
 

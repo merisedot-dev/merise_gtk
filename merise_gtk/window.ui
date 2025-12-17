@@ -17,7 +17,7 @@
           <object class="AdwHeaderBar" id="mgtk_header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
-                <property name="action-name">mgtk.open-btn.choose</property>
+                <property name="action-name">open_proj</property>
                 <property name="label">Open</property>
                 <property name="menu-model">proj-menu</property>
               </object>
@@ -42,8 +42,8 @@
             </child>
             <child type="end">
               <object class="GtkButton" id="newproj_btn">
-                <property name="action-name">mk_proj</property>
                 <property name="icon-name">list-add-symbolic</property>
+                <signal name="clicked" handler="newproj_btn_clicked"/>
               </object>
             </child>
           </object>

@@ -15,9 +15,10 @@ class MGTKWindow(Gtk.ApplicationWindow):
     __gtype_name__ = "root-window"
 
     # TODO fetch relevant signals
-    # fetch kids
+    # fetch widget kids
     mgtk_header = Gtk.Template.Child()
     newproj_btn = Gtk.Template.Child()
+    open_btn = Gtk.Template.Child()
 
     # TODO define callbacks
     # TODO define gtk-related properties
@@ -25,17 +26,17 @@ class MGTKWindow(Gtk.ApplicationWindow):
     def __init__(self, **kwargs) -> None:
         # TODO define inner attrs
         self._proj: MGTKProject = None
+        # gtk persistance specifics
+        self._actions = {}
         # regular constructor for our window
         super().__init__(**kwargs)
-        # add stateless actions to handle by the window
-        for action in ["mk_proj"]:
-            gio_act = Gio.SimpleAction.new(action, None)
-            gio_act.connect("activate", getattr(self, f"on_{action}_activate"))
-            self.add_action(gio_act)
+        # TODO add stateless actions to handle by the window
+        # TODO define on_click callbacks
 
     @GObject.Property(type=MGTKProject)
     def proj(self) -> MGTKProject:
         return self._proj
 
-    def on_mk_proj_activate(self) -> None:
-        pass
+    @Gtk.Template.Callback()
+    def newproj_btn_clicked(self, button) -> None:
+        print("TODO")

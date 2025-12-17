@@ -17,27 +17,21 @@
           <object class="AdwHeaderBar" id="mgtk_header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
-                <property name="action-name">open_proj</property>
                 <property name="label">Open</property>
                 <property name="menu-model">proj-menu</property>
+                <signal name="clicked" handler="open_btn_clicked"/>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="undo_btn">
-                <property name="action-name">mgtk.undo-btn.click</property>
                 <property name="icon-name">edit-undo-symbolic</property>
+                <signal name="clicked" handler="undo_btn_clicked"/>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="redo_btn">
-                <property name="action-name">mgtk.redo-btn.click</property>
                 <property name="icon-name">edit-redo-symbolic</property>
-              </object>
-            </child>
-            <child type="end">
-              <object class="GtkMenuButton" id="main_menu">
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="menu-model">mgtk-menu</property>
+                <signal name="clicked" handler="redo_btn_clicked"/>
               </object>
             </child>
             <child type="end">

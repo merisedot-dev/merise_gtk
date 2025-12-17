@@ -40,3 +40,15 @@ class MGTKWindow(Gtk.ApplicationWindow):
     @Gtk.Template.Callback()
     def newproj_btn_clicked(self, button) -> None:
         print("TODO")
+
+    @Gtk.Template.Callback()
+    def open_btn_clicked(self, button) -> None:
+        print("TODO")
+
+    @Gtk.Template.Callback()
+    def redo_btn_clicked(self, button) -> None:
+        print("TODO")
+
+    @Gtk.Template.Callback()
+    def undo_btn_clicked(self, button) -> None:
+        print("TODO")

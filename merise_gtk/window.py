@@ -11,6 +11,12 @@ from .model import MGTKProject
 
 @Gtk.Template(filename="merise_gtk/window.ui")
 class MGTKWindow(Gtk.ApplicationWindow):
+    """Root window template class.
+    This is meant to be the first type of GTK widget called by the application and
+    will govern the placement and interactions within the application window.
+    It will also handle the placement of new widgets, but not their logic.
+    """
+
     # type definition
     __gtype_name__ = "root-window"
 
@@ -19,15 +25,12 @@ class MGTKWindow(Gtk.ApplicationWindow):
     mgtk_header = Gtk.Template.Child()
     newproj_btn = Gtk.Template.Child()
     open_btn = Gtk.Template.Child()
-
-    # TODO define callbacks
-    # TODO define gtk-related properties
+    redo_btn = Gtk.Template.Child()
+    undo_btn = Gtk.Template.Child()
 
     def __init__(self, **kwargs) -> None:
         # TODO define inner attrs
         self._proj: MGTKProject = None
-        # gtk persistance specifics
-        self._actions = {}
         # regular constructor for our window
         super().__init__(**kwargs)
         # TODO add stateless actions to handle by the window

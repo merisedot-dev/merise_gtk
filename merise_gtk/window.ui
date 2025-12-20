@@ -7,7 +7,7 @@
   <requires lib="libadwaita" version="1.4"/>
   <template class="root-window" parent="GtkApplicationWindow">
     <property name="decorated">False</property>
-    <property name="default-height">600</property>
+    <property name="default-height">800</property>
     <property name="default-width">1400</property>
     <property name="title">MeriseGTK</property>
     <child>
@@ -17,7 +17,7 @@
           <object class="AdwHeaderBar" id="mgtk_header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
-                <property name="label">Open</property>
+                <property name="label" translatable="yes">Open</property>
                 <property name="menu-model">proj-menu</property>
                 <signal name="clicked" handler="open_btn_clicked"/>
               </object>
@@ -111,7 +111,7 @@
                             <child>
                               <object class="GtkLabel">
                                 <property name="justify">center</property>
-                                <property name="label">New Project</property>
+                                <property name="label" translatable="yes">New Project</property>
                               </object>
                             </child>
                             <child>
@@ -124,7 +124,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="halign">end</property>
-                                    <property name="label">Name</property>
+                                    <property name="label" translatable="yes">Name</property>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">0</property>
@@ -134,7 +134,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="halign">end</property>
-                                    <property name="label">Target SGBD</property>
+                                    <property name="label" translatable="yes">Target SGBD</property>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">2</property>
@@ -144,7 +144,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="halign">end</property>
-                                    <property name="label">Location</property>
+                                    <property name="label" translatable="yes">Location</property>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">1</property>
@@ -154,7 +154,7 @@
                                 <child>
                                   <object class="GtkEntry" id="proj_name_entry">
                                     <property name="focusable">True</property>
-                                    <property name="input-hints">lowercase | none</property>
+                                    <property name="input-hints">lowercase|none</property>
                                     <property name="input-purpose">alpha</property>
                                     <property name="width-chars">32</property>
                                     <layout>
@@ -166,7 +166,7 @@
                                 </child>
                                 <child>
                                   <object class="GtkButton" id="proj_validate_btn">
-                                    <property name="label">Create</property>
+                                    <property name="label" translatable="yes">Create Project</property>
                                     <layout>
                                       <property name="column">3</property>
                                       <property name="row">3</property>
@@ -177,6 +177,9 @@
                                   <object class="GtkBox">
                                     <property name="halign">start</property>
                                     <property name="homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkToggleButton"/>
+                                    </child>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">0</property>

@@ -40,6 +40,7 @@
               venvShellHook
               bumpver
               behave # testing utility
+              just # custom project commands utility
               mkdocs # documentation building tool
               # graphics tools
               libadwaita

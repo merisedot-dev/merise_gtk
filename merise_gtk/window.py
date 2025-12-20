@@ -55,3 +55,11 @@ class MGTKWindow(Gtk.ApplicationWindow):
     @Gtk.Template.Callback()
     def undo_btn_clicked(self, button) -> None:
         print("TODO")
+
+    @Gtk.Template.Callback()
+    def validate_btn_clicked(self, button) -> None:
+        print("TODO")
+
+    @Gtk.Template.Callback()
+    def cancel_btn_clicked(self, button) -> None:
+        print("TODO")

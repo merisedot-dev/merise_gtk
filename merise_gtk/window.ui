@@ -17,7 +17,7 @@
           <object class="AdwHeaderBar" id="mgtk_header">
             <child>
               <object class="AdwSplitButton" id="open_btn">
-                <property name="label" translatable="yes">Open</property>
+                <property name="label" translatable="yes">Open Project</property>
                 <property name="menu-model">proj-menu</property>
                 <signal name="clicked" handler="open_btn_clicked"/>
               </object>
@@ -32,6 +32,12 @@
               <object class="GtkButton" id="redo_btn">
                 <property name="icon-name">edit-redo-symbolic</property>
                 <signal name="clicked" handler="redo_btn_clicked"/>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="menu_btn">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">mgtk-menu</property>
               </object>
             </child>
             <child type="end">
@@ -124,7 +130,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="halign">end</property>
-                                    <property name="label" translatable="yes">Name</property>
+                                    <property name="label" translatable="yes">Project Name</property>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">0</property>
@@ -144,7 +150,7 @@
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="halign">end</property>
-                                    <property name="label" translatable="yes">Location</property>
+                                    <property name="label" translatable="yes">Project Location</property>
                                     <layout>
                                       <property name="column">0</property>
                                       <property name="row">1</property>
@@ -165,11 +171,13 @@
                                   </object>
                                 </child>
                                 <child>
-                                  <object class="GtkButton" id="proj_validate_btn">
+                                  <object class="GtkButton" id="validate_btn">
                                     <property name="label" translatable="yes">Create Project</property>
+                                    <property name="margin-top">16</property>
+                                    <signal name="clicked" handler="validate_btn_clicked"/>
                                     <layout>
-                                      <property name="column">3</property>
-                                      <property name="row">3</property>
+                                      <property name="column">1</property>
+                                      <property name="row">4</property>
                                     </layout>
                                   </object>
                                 </child>
@@ -178,11 +186,63 @@
                                     <property name="halign">start</property>
                                     <property name="homogeneous">True</property>
                                     <child>
-                                      <object class="GtkToggleButton"/>
+                                      <object class="GtkToggleButton" id="mysql_selector">
+                                        <property name="halign">center</property>
+                                        <property name="tooltip-text">MySQL</property>
+                                        <child>
+                                          <object class="GtkBox">
+                                            <property name="orientation">vertical</property>
+                                            <property name="spacing">8</property>
+                                            <child>
+                                              <object class="GtkImage">
+                                                <property name="file">assets/mysql-icon.svg</property>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkLabel">
+                                                <property name="justify">center</property>
+                                                <property name="label">MySQL</property>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </child>
+                                      </object>
                                     </child>
                                     <layout>
+                                      <property name="column">1</property>
+                                      <property name="column-span">2</property>
+                                      <property name="row">2</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="cancel_btn">
+                                    <property name="label" translatable="yes">CancelMkProj</property>
+                                    <property name="margin-top">16</property>
+                                    <signal name="clicked" handler="cancel_btn_clicked"/>
+                                    <layout>
                                       <property name="column">0</property>
-                                      <property name="row">0</property>
+                                      <property name="row">4</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="path_picker">
+                                    <property name="halign">start</property>
+                                    <property name="hexpand">True</property>
+                                    <layout>
+                                      <property name="column">1</property>
+                                      <property name="column-span">3</property>
+                                      <property name="row">1</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">MLD Filename</property>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">3</property>
                                     </layout>
                                   </object>
                                 </child>
@@ -205,29 +265,29 @@
   <menu id="mgtk-menu">
     <item>
       <attribute name="action">mk_proj</attribute>
-      <attribute name="label">New Project</attribute>
+      <attribute name="label" translatable="yes">MkProject</attribute>
     </item>
     <section>
       <submenu>
-        <attribute name="label">Add file</attribute>
+        <attribute name="label" translatable="yes">MkFile</attribute>
         <item>
           <attribute name="action">mgtk_menu.add_db</attribute>
-          <attribute name="label">Add DB</attribute>
+          <attribute name="label" translatable="yes">MkDB</attribute>
         </item>
         <item>
           <attribute name="action">mgtk_menu.add_script</attribute>
-          <attribute name="label">Add script</attribute>
+          <attribute name="label" translatable="yes">MkScript</attribute>
         </item>
       </submenu>
     </section>
     <section>
       <item>
         <attribute name="action">mgtk_menu.save</attribute>
-        <attribute name="label">Save</attribute>
+        <attribute name="label" translatable="yes">Save</attribute>
       </item>
       <item>
         <attribute name="action">mgtk_menu.close</attribute>
-        <attribute name="label">Close project</attribute>
+        <attribute name="label" translatable="yes">Close project</attribute>
       </item>
     </section>
   </menu>

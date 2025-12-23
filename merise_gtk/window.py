@@ -21,20 +21,31 @@ class MGTKWindow(Gtk.ApplicationWindow):
     __gtype_name__ = "root-window"
 
     # TODO fetch relevant signals
-    # fetch widget kids
+    # headerbar widgets
     mgtk_header = Gtk.Template.Child()
     newproj_btn = Gtk.Template.Child()
     open_btn = Gtk.Template.Child()
     redo_btn = Gtk.Template.Child()
     undo_btn = Gtk.Template.Child()
 
+    # main area widgets
+    mgtk_stack = Gtk.Template.Child()
+    mgtk_version_lbl = Gtk.Template.Child()
+
+    # creation form widgets
+    proj_name_entry = Gtk.Template.Child()
+    validate_btn = Gtk.Template.Child()
+    cancel_btn = Gtk.Template.Child()
+    path_picker = Gtk.Template.Child()
+    path_picker_lbl = Gtk.Template.Child()
+    mcd_name_entry = Gtk.Template.Child()
+
     def __init__(self, **kwargs) -> None:
-        # TODO define inner attrs
         self._proj: MGTKProject = None
-        # regular constructor for our window
+        # regular GTK constructor for our window
         super().__init__(**kwargs)
         # TODO add stateless actions to handle by the window
-        # TODO define on_click callbacks
+        # TODO ensure stack is operational and points to the right page
 
     @GObject.Property(type=MGTKProject)
     def proj(self) -> MGTKProject:
@@ -62,4 +73,8 @@ class MGTKWindow(Gtk.ApplicationWindow):
 
     @Gtk.Template.Callback()
     def cancel_btn_clicked(self, button) -> None:
+        print("TODO")
+
+    @Gtk.Template.Callback()
+    def path_picker_clicked(self, button) -> None:
         print("TODO")

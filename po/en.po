@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-20 17:31+0100\n"
-"PO-Revision-Date: 2025-12-22 16:58+0100\n"
+"PO-Revision-Date: 2025-12-22 17:45+0100\n"
 "Last-Translator: kheldae <taho.gougeon@gmail.com>\n"
 "Language-Team: English\n"
 "Language: en_US\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: merise_gtk/window.ui:20
 msgid "Open Project"
-msgstr "Open Project"
+msgstr "Open"
 
 #: merise_gtk/window.ui:120
 msgid "New Project"
@@ -43,7 +43,7 @@ msgstr "Create Project"
 
 #: merise_gtk/window.ui:220
 msgid "CancelMkProj"
-msgstr "CancelMkProj"
+msgstr "Cancel"
 
 #: merise_gtk/window.ui:242
 msgid "MLD Filename"
@@ -51,19 +51,19 @@ msgstr "MLD Filename"
 
 #: merise_gtk/window.ui:268
 msgid "MkProject"
-msgstr "MkProject"
+msgstr "New project"
 
 #: merise_gtk/window.ui:272
 msgid "MkFile"
-msgstr "MkFile"
+msgstr "Add file"
 
 #: merise_gtk/window.ui:275
 msgid "MkDB"
-msgstr "MkDB"
+msgstr "Add database"
 
 #: merise_gtk/window.ui:279
 msgid "MkScript"
-msgstr "MkScript"
+msgstr "Add script"
 
 #: merise_gtk/window.ui:286
 msgid "Save"

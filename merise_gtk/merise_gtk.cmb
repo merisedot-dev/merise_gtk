@@ -3,7 +3,7 @@
 <!-- Created with Cambalache 0.96.3 -->
 <cambalache-project version="0.96.0" target_tk="gtk-4.0">
   <css filename="merise_gtk.css"/>
-  <ui template-class="root-window" filename="window.ui" sha256="8d03d07bbbe775637b2a03f053230c8ecb6c751eb11e833bdf2608614d1a50d8">
+  <ui template-class="root-window" filename="window.ui" sha256="6e24b1414716d8bda0fd51a31cc64bb7c13c23b6e8628a9fc878b19dafe3b63c">
     <css-provider>merise_gtk.css</css-provider>
   </ui>
 </cambalache-project>

@@ -1,4 +1,5 @@
-# English translations for PACKAGE package.
+# French translations for PACKAGE package
+# Traductions françaises du paquet PACKAGE.
 # Copyright (C) 2025 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # kheldae <taho.gougeon@gmail.com>, 2025.
@@ -7,68 +8,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 17:31+0100\n"
-"PO-Revision-Date: 2025-12-22 17:45+0100\n"
+"POT-Creation-Date: 2025-12-23 13:24+0100\n"
+"PO-Revision-Date: 2025-12-25 10:34+0100\n"
 "Last-Translator: kheldae <taho.gougeon@gmail.com>\n"
-"Language-Team: English\n"
-"Language: en_US\n"
+"Language-Team: French <traduc@traduc.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: merise_gtk/window.ui:20
 msgid "Open Project"
-msgstr "Open"
+msgstr "Ouvrir"
 
 #: merise_gtk/window.ui:120
 msgid "New Project"
-msgstr "New Project"
+msgstr "Nouveau projet"
 
 #: merise_gtk/window.ui:133
 msgid "Project Name"
-msgstr "Project Name"
+msgstr "Nom"
 
 #: merise_gtk/window.ui:143
 msgid "Target SGBD"
-msgstr "Target SGBD"
+msgstr "SGBD cible"
 
 #: merise_gtk/window.ui:153
 msgid "Project Location"
-msgstr "Project Location"
+msgstr "Emplacement"
 
 #: merise_gtk/window.ui:175
 msgid "Create Project"
-msgstr "Create Project"
+msgstr "Nouveau projet"
 
 #: merise_gtk/window.ui:220
 msgid "CancelMkProj"
-msgstr "Cancel"
+msgstr "Annuler"
 
-#: merise_gtk/window.ui:242
+#: merise_gtk/window.ui:255
 msgid "MLD Filename"
-msgstr "MLD Filename"
+msgstr "Nom du MCD"
 
-#: merise_gtk/window.ui:268
+#: merise_gtk/window.ui:294
 msgid "MkProject"
-msgstr "New project"
+msgstr "Nouveau projet"
 
-#: merise_gtk/window.ui:272
+#: merise_gtk/window.ui:298
 msgid "MkFile"
-msgstr "Add file"
+msgstr "Nouveau fichier"
 
-#: merise_gtk/window.ui:275
+#: merise_gtk/window.ui:301
 msgid "MkDB"
-msgstr "Add database"
+msgstr "Nouvelle base de données"
 
-#: merise_gtk/window.ui:279
+#: merise_gtk/window.ui:305
 msgid "MkScript"
-msgstr "Add script"
+msgstr "Nouveau script"
 
-#: merise_gtk/window.ui:286
+#: merise_gtk/window.ui:312
 msgid "Save"
-msgstr "Save"
+msgstr "Sauvegarder"
 
-#: merise_gtk/window.ui:290
+#: merise_gtk/window.ui:316
 msgid "Close project"
-msgstr "Close project"
+msgstr "Fermer"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 17:31+0100\n"
+"POT-Creation-Date: 2025-12-23 13:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,30 +45,30 @@ msgstr ""
 msgid "CancelMkProj"
 msgstr ""
 
-#: merise_gtk/window.ui:242
+#: merise_gtk/window.ui:255
 msgid "MLD Filename"
 msgstr ""
 
-#: merise_gtk/window.ui:268
+#: merise_gtk/window.ui:294
 msgid "MkProject"
 msgstr ""
 
-#: merise_gtk/window.ui:272
+#: merise_gtk/window.ui:298
 msgid "MkFile"
 msgstr ""
 
-#: merise_gtk/window.ui:275
+#: merise_gtk/window.ui:301
 msgid "MkDB"
 msgstr ""
 
-#: merise_gtk/window.ui:279
+#: merise_gtk/window.ui:305
 msgid "MkScript"
 msgstr ""
 
-#: merise_gtk/window.ui:286
+#: merise_gtk/window.ui:312
 msgid "Save"
 msgstr ""
 
-#: merise_gtk/window.ui:290
+#: merise_gtk/window.ui:316
 msgid "Close project"
 msgstr ""

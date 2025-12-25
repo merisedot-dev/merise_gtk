@@ -44,12 +44,21 @@ class MGTKWindow(Gtk.ApplicationWindow):
         self._proj: MGTKProject = None
         # regular GTK constructor for our window
         super().__init__(**kwargs)
+        # TODO add defaults for app launch
         # TODO add stateless actions to handle by the window
         # TODO ensure stack is operational and points to the right page
+
+    # ensuring stack page can change
+    def set_stackpage(self, page) -> None:
+        self.mgtk_stack.set_visible_child_name(page)
+
+    # PROPERTIES
 
     @GObject.Property(type=MGTKProject)
     def proj(self) -> MGTKProject:
         return self._proj
+
+    # CALLBACKS
 
     @Gtk.Template.Callback()
     def newproj_btn_clicked(self, button) -> None:
